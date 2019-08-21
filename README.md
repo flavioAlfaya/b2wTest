@@ -1,7 +1,12 @@
 # B2W Test
 
-Desafio proposto pelo processo seletivo da B2W. Construir uma api que cadastra, le, apaga inscrições de planetas que estão relatados na franquia de filmes Star Wars
+Desafio proposto pelo processo seletivo da B2W. Construir uma api que cadastra, le, apaga inscrições de planetas que estão relatados na franquia de filmes Star Wars.
+# Tecnologias usadas
+```sh
+nodeJS
+MongoDB -> Atlas
 
+```
 ### Instalar dependências e rodar projeto (Npm)
 ```sh
 npm install 
