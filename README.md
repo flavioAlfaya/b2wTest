@@ -34,7 +34,15 @@ yarn start
 # Testes
 ## rodar os testes automatizados
 ```sh
+Os testes são executados sem a necessidade do servidor estar rodando.
 npm test
+
+1 - Primeiramente o banco será zerado
+2 - Teste de cadastro de um planeta da lista do SWAPI
+3 - Teste de cadastro de um planeta fora da lista do SWAPI
+4 - Teste de visualização de um único planeta
+5 - Teste de listagem de todos os planetas
+6 - Teste de Apagar um planeta especifico ( apagando o que não faz parte da lista SWAPI)
 
 ```
 

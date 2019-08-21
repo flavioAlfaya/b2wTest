@@ -55,7 +55,7 @@ describe('Teste de listagem de planetas', function(){
             done();
         })
     })
-    it('pegar planeta pelo ID',function(done){
+    it('Pegar planeta pelo ID',function(done){
         chai.request(server)
         .get('/planetas/1')
         .end(function(err,res){
@@ -69,7 +69,7 @@ describe('Teste de listagem de planetas', function(){
             done();
         })
     })
-    it('listar planetas',function(done){
+    it('Listar planetas',function(done){
         chai.request(server)
         .get('/planetas/')
         .end(function(err,res){
