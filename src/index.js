@@ -9,3 +9,5 @@ app.use(bodyParser.urlencoded({extended:false}))
 require('./controllers/planetaController')(app)
 
 app.listen(3000)
+
+module.exports = app

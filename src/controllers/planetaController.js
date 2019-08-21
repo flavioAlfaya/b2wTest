@@ -3,7 +3,7 @@ const Planeta = require('../models/planeta')
 const router = express.Router()
 const axios = require('axios');
 
-router.get('/', async (req, res) => {
+router.get('/', function(req, res){
     Planeta.find({}, function(err, planetas) {   
         res.send(planetas);  
     });
@@ -13,7 +13,9 @@ router.post('/criar', async (req, res) => {
     var planetID = ''
         axios.get('https://swapi.co/api/planets/?search='+req.body.nome)
         .then(response => {
-            var planetaExterno = response.data.results[0]
+            if(response.data.results.length>0){
+                var planetaExterno = response.data.results[0]
+            }
             Planeta.find({},function(err, planetas) {
                 planetas = planetas
                 let ultimo = planetas.length
@@ -21,8 +23,12 @@ router.post('/criar', async (req, res) => {
                     if(planeta){
                         res.send(`Falha ao inserir. Já existe planeta com esse nome: ${req.body.nome}`)
                     }else{
-                        planetID = planetas[ultimo-1].planetID
-                        planetID = planetID + 1
+                        if(ultimo === 0){
+                            planetID = 1
+                        }else{
+                            planetID = planetas[ultimo-1].planetID
+                            planetID = planetID + 1
+                        }
                         const planetaNovo = {
                             'planetID': planetID,
                             'nome': req.body.nome, 
@@ -30,7 +36,7 @@ router.post('/criar', async (req, res) => {
                             'terreno': req.body.terreno,
                             'qtdFilmes': 0
                         };
-                        if(planetaExterno.films.length>0){
+                        if(planetaExterno){
                             planetaNovo.qtdFilmes = planetaExterno.films.length
                         }
                         const planeta = new Planeta(planetaNovo)
