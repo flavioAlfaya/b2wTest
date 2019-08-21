@@ -16,12 +16,12 @@ yarn start
 ```
 
 # Rotas
-| FUNÇÃO                               	| MÉTODO 	|         ROTA         	| REQUISIÇÃO                                              	| RETORNO                      	|
-|--------------------------------------	|:------:	|:--------------------:	|---------------------------------------------------------	|------------------------------	|
-| Listar todos os planetas             	|  GET   	|      'planetas/'     	|     -                                                   	| Array de planetas            	|
+| FUNÇÃO                               	| MÉTODO 	|         ROTA         	|                        REQUISIÇÃO                       	| RETORNO                      	|
+|--------------------------------------	|:------:	|:--------------------:	|:-------------------------------------------------------:	|------------------------------	|
+| Listar todos os planetas             	|  GET   	|      'planetas/'     	|                            -                            	| Array de planetas            	|
 | Cadastrar um novo planeta            	|  POST  	|   'planetas/criar'   	| Objeto:{ nome: String, clima: String, terreno: String } 	| Objeto do planeta criado     	|
-| Pegar dados de um planeta especifico 	|   GET  	|    'planetas/:id'    	|      id                                                 	| Objeto do planeta pesquisado 	|
-| Apagar um planeta especifico         	| DELETE 	| 'planetas/apagar/:id 	|       id                                                	| mensagem em formato string   	|
+| Pegar dados de um planeta especifico 	|   GET  	|    'planetas/:id'    	|                            id                           	| Objeto do planeta pesquisado 	|
+| Apagar um planeta especifico         	| DELETE 	| 'planetas/apagar/:id 	|                            id                           	| mensagem em formato string   	|
 
 # Testes
 ## rodar os testes automatizados
