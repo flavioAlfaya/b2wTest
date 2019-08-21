@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const conectionString = 'mongodb+srv://starWarsADM:admAlfaya@starwarsapi-vtchb.mongodb.net/test?retryWrites=true&w=majority'
 // const conectionString = 'mongodb://localhost/swAPI'
 
-mongoose.connect('mongodb+srv://starWarsADM:admAlfaya@starwarsapi-vtchb.mongodb.net/starWarsAPI?retryWrites=true&w=majority',{ useNewUrlParser: true })
+mongoose.connect('mongodb+srv://starWarsADM:admAlfaya@starwarsapi-vtchb.mongodb.net/starWarsAPI?retryWrites=true&w=majority',{ useNewUrlParser: true})
     .then(() => {
         console.log('connected to db')
     })

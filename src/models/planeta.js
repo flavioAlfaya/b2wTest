@@ -1,6 +1,10 @@
 const mongoose = require('../database')
 
 const PlanetsSchema = new mongoose.Schema({
+    planetID:{
+        type: Number,
+        unique:true
+    },
     nome:{
         type:String,
         required:true
